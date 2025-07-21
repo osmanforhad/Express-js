@@ -15,6 +15,12 @@ app.get('/two', (req, res) => {
     res.send("cookie set success");
 });
 
+app.get('/three', (req, res) => {
+    //set clear cookie response
+    res.clearCookie('name');
+    res.clearCookie('age');
+});
+
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
